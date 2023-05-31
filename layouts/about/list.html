@@ -1,0 +1,105 @@
+{{ define "main" }}
+
+<div>
+  <div style="margin-bottom: 10px;">
+    <h2 class="text-4xl font-bold">会社概要</h2>
+  </div>
+  <div style="margin-bottom: 25px;">
+    <img src="./about-cover.png">
+  </div>
+
+  <div style="margin-bottom: 35px;">
+    <h4 class="mb-4 text-2l font-bold md:mb-6 lg:text-3xl">”効率的で持続可能なCloudシステムを実現したい”</h4>
+    <hr style="margin-bottom: 10px; width: 400px;">
+    <div style="margin: 0 25px;">
+      再現性と持続可能性を重視し、一貫性のある環境構築と運用を実現します。
+      自動化ソリューションはテンプレートやコンテナ化などのベストプラクティスを組み込み、
+      リソースの効率的な管理と持続可能なクラウド環境をサポートします。
+    </div>
+    <div style="margin-top: 35px;">
+      <h4 class="mb-4 text-1l font-bold md:mb-6 lg:text-3xl">CI/CD（継続的インテグレーション/継続的デリバリー）の製品</h4>
+      <hr style="margin-bottom: 10px; width: 510px;">
+      <div style="margin: 0 25px;">効率的な開発・デプロイメントプロセスを実現するためのパイプラインの設定やジョブの実行、デプロイメント、運用の自動化などが可能です。</div>
+      <div>
+        <img src="./tool-product.png" style="width:590px">
+      </div>
+    </div>
+
+    <div style="margin-top: 25px;">
+      <h4 class="mb-4 text-1l font-bold md:mb-6 lg:text-3xl">業務サービス</h4>
+      <hr style="margin-bottom: 10px; width: 110px;">
+      <div style="width:86%;">
+        {{ .Content}}
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-bottom: 35px;">
+    <h4 class="mb-4 text-1l font-bold md:mb-6 lg:text-3xl">GitOps導入</h4>
+    <div class="flex px-4 py-3 rounded-md" style="background-color: #FFF2CC">
+      <div>
+        <div>
+          <strong>製品：</strong>GitLab Runner、GitHub Actions
+        </div>
+        <hr style="margin-bottom: 10px; width: 310px;">
+        <div style="margin: 0 25px;">
+          <p>
+            GitOpsを実現するためのアーキテクチャ設計を行い、適切なインフラストラクチャを構築します。
+          </p>
+          <p>
+            GitOpsに基づくデプロイメントワークフローを設計し、自動化します。
+          </p>
+          <p>
+            変更の管理、CI/CDパイプラインの設定、デプロイの自動化、テストの自動化など、効率的なワークフローを実現します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 35px;">
+    <h4 class="mb-4 text-1l font-bold md:mb-6 lg:text-3xl">Terraform導入</h4>
+    <div class="flex px-4 py-3 rounded-md" style="background-color: #E8CFFF">
+      <div>
+        <div>
+          <strong>製品：</strong>Terraform Cloud
+        </div>
+        <hr style="margin-bottom: 10px; width: 190px;">
+        <div style="margin: 0 25px;">
+          <p>
+            TerraformによるIaC（Infrastructure as
+            Code）を導入するためのアーキテクチャ設計を行い、適切なインフラストラクチャを構築します。ツールの選定と設定、テンプレートコードの開発、プロビジョニングや設定管理などを担当します。
+          </p>
+          <p>
+            IaCに基づくデプロイメントパイプラインを設計し、自動化します。
+            ソースコードの管理、ビルド、テスト、デプロイなどのプロセスを自動化し、効率的で確実なデプロイを実現します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h4 class="mb-4 text-1l font-bold md:mb-6 lg:text-3xl">Ansibe導入</h4>
+    <div class="flex px-4 py-3 rounded-md" style="background-color: #FFB3B3">
+      <div>
+        <div>
+          <strong>製品：</strong>Red Hat Ansible Automation Platform
+        </div>
+        <hr style="margin-bottom: 10px; width: 360px;">
+        <div style="margin: 0 25px;">
+          <p>
+            Ansible Automation
+            Platformに基づくワークフローを設計し、自動化します。プレイブックの開発と管理、インベントリの設定、タスクの実行、スケジューリングなどを自動化し、効率的な運用を実現します。
+          </p>
+          <p>
+            Ansible Automation Platform環境のセキュリティ対策とアクセス管理を設計します。ユーザー認証と認可の設定、アクセス制御、セキュリティポリシーの適用などを含みます。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ end }}

@@ -1,0 +1,89 @@
+{{ define "main" }}
+<div id="divRoot">
+  <div style="margin-bottom: 20px;">
+    <h2 class="text-4xl font-bold">案件(導入、設計、支援)お問合せフォーム</h2>
+  </div>
+
+  <form id="formContact" style="width: 780px;">
+    <div style="margin-bottom: 20px;">
+      <label for="name" class="mb-2 inline-block text-sm">お名前*</label>
+      <input name="name" id="formContactName"
+        class="w-full rounded border px-3 py-2"
+        required autofocus/>
+    </div>
+
+    <div class="sm:col-span-2" style="margin-bottom: 20px;">
+      <label for="company" class="mb-2 inline-block text-sm">会社名*</label>
+      <input name="company" id="formContactCompany"
+      class="w-full rounded border px-3 py-2"
+      required />
+    </div>
+
+    <div class="sm:col-span-2" style="margin-bottom: 20px;">
+      <label for="email" class="mb-2 inline-block text-sm">メールアドレス*</label>
+      <input name="email" type="email" id="formContactEmail"
+      class="w-full rounded border px-3 py-2"
+      required />
+    </div>
+
+    <div class="sm:col-span-2" style="margin-bottom: 10px;">
+      <label for="message" class="mb-2 inline-block text-sm">問い合わせ内容*</label>
+      <textarea name="message" id="formContactMessage"
+        class="w-full rounded border px-3 py-2"
+        rows="8" required></textarea>
+    </div>
+
+    <div class="flex items-center justify-between sm:col-span-2">
+      <button style="
+          color:white;
+          background-color: dodgerblue;
+          width: 130px;
+          border: 0.3rem outset dodgerblue;
+          border-radius: 5px;
+          font: bold 1rem sans-serif;
+          padding: 0.2rem;" class="w-full rounded border" id="formContactButton">送　信
+      </button>
+      <span class="text-sm text-gray-500">*必須項目</span>
+    </div>
+  </form>
+</div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  const mailUrl = "https://formspree.io/f/mpzeekqq"
+
+  formContact.addEventListener("submit", async (event) => {
+    event.preventDefault()
+
+    const confirmResult = confirm('案件問い合わせ内容を送信します？');
+    if (confirmResult === false) {
+      return
+    }
+
+    const formData = new FormData()
+    formData.append("name", formContactName.value)
+    formData.append("email", formContactEmail.value)
+    formData.append("company", formContactCompany.value)
+    formData.append("message", formContactMessage.value)
+
+    try {
+      const { data } = await axios.post(mailUrl, formData)
+      formContact.reset()
+      const responseText = `<div>
+        <h4 class="mb-4 text-2xl font-bold md:mb-6 lg:text-3xl">お問い合わせいただき、ありがとうございます。</h4>
+        <hr style="margin-bottom: 20px;">
+        <div class="text-1xl md:mb-6" style="padding: 15px;">
+          <p>担当者よりご連絡いたしますので、しばらくお待ちください。</p>
+          <p>弊社チームが現在、プロジェクトの詳細を確認し、最適な解決策をご提案いたします。</p>
+          <p>必要な追加情報がある場合は、担当者からご連絡させていただきます。</p>
+          <p>引き続きお手伝いできることを楽しみにしております。</p>
+        </div>
+      </div>`
+      divRoot.innerHTML = responseText
+    } catch (error) {
+      alert("お問い合わせ送信が失敗しました。")
+    }
+  })
+</script>
+
+{{ end }}

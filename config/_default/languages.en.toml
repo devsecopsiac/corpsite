@@ -5,9 +5,9 @@ isoCode = "en"
 weight = 1
 rtl = false
 
-title = "Hoge & Dev"
-description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
-copyright = "&copy; 2023 Hoge & Dev, Inc."
+title = "TechOps_"
+description = "Revolutionizing Infrastructure Operations through Automated Solutions."
+copyright = "&copy; 2023 TechOps株式会社"
 
 dateFormat = "2006-01-02"
 
