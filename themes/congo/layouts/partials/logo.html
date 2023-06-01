@@ -1,0 +1,16 @@
+{{- if .Site.Params.header.logo }}
+{{- $logo := resources.Get .Site.Params.header.logo }}
+{{- $logo_dark := resources.Get .Site.Params.header.logoDark }}
+{{- if $logo }}
+<a href="{{ "" | relLangURL }}">
+  <span style="border-radius: 100%;  color:white; background-color: red; padding:6px; border: solid 0.075rem #f7426c;box-shadow:0 0 0 1px #afafaf;
+      margin-right: 7px;font-family: 'Times New Roman';font-size: 17px">テ</span>
+  <span style="font-size: 18px;font-family:'Times New Roman'">TechOps</span>
+  <span style="font-size: 15px;">株式会社</span>
+</a>
+{{- end }}
+{{- end }}
+{{- if .Site.Params.header.showTitle | default true }}
+<a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" rel="me"
+  href="{{ "" | relLangURL }}">{{ .Site.Title | markdownify | emojify }}</a>
+{{- end }}

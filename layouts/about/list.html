@@ -1,43 +1,42 @@
 {{ define "main" }}
 
 <div>
-  <div style="margin-bottom: 10px;">
+  <div style="margin-bottom: 25px;">
     <h2 class="text-4xl font-bold">会社概要</h2>
   </div>
-  <div style="margin-bottom: 25px;">
+  <div style="margin-bottom: 40px;">
     <img src="./about-cover.png">
   </div>
 
-  <div style="margin-bottom: 35px;">
-    <h4 class="mb-4 text-2l font-bold md:mb-6 lg:text-3xl">”効率的で持続可能なCloudシステムを実現したい”</h4>
-    <hr style="margin-bottom: 10px; width: 400px;">
+  <div style="margin-bottom: 50px;">
+    <h4 class="mb-4 text-2xl font-bold md:mb-6 lg:text-3xl">”効率的で持続可能なCloudシステムを実現したい”</h4>
+    <hr style="margin-bottom: 10px; width: 520px;">
     <div style="margin: 0 25px;">
       再現性と持続可能性を重視し、一貫性のある環境構築と運用を実現します。
       自動化ソリューションはテンプレートやコンテナ化などのベストプラクティスを組み込み、
       リソースの効率的な管理と持続可能なクラウド環境をサポートします。
     </div>
-    <div style="margin-top: 35px;">
+    <div style="margin-top: 50px;">
       <h4 class="mb-4 text-1l font-bold md:mb-6 lg:text-3xl">CI/CD（継続的インテグレーション/継続的デリバリー）の製品</h4>
       <hr style="margin-bottom: 10px; width: 510px;">
-      <div style="margin: 0 25px;">効率的な開発・デプロイメントプロセスを実現するためのパイプラインの設定やジョブの実行、デプロイメント、運用の自動化などが可能です。</div>
+      <div style="margin: 0 25px 20px;">効率的な開発・デプロイメントプロセスを実現するためのパイプラインの設定やジョブの実行、デプロイメント、運用の自動化などが可能です。</div>
       <div>
-        <img src="./tool-product.png" style="width:590px">
+        <img src="./tool-product.png" style="width:530px">
       </div>
     </div>
 
-    <div style="margin-top: 25px;">
+    <div style="margin-top: 40px;">
       <h4 class="mb-4 text-1l font-bold md:mb-6 lg:text-3xl">業務サービス</h4>
-      <hr style="margin-bottom: 10px; width: 110px;">
+      <hr style="margin-bottom: 30px; width: 110px;">
       <div style="width:86%;">
         {{ .Content}}
       </div>
     </div>
-
   </div>
 
-  <div style="margin-bottom: 35px;">
+  <div style="margin-bottom: 40px;">
     <h4 class="mb-4 text-1l font-bold md:mb-6 lg:text-3xl">GitOps導入</h4>
-    <div class="flex px-4 py-3 rounded-md" style="background-color: #FFF2CC">
+    <div class="flex px-4 py-3 rounded-md" style="background-color: #f3f5f7">
       <div>
         <div>
           <strong>製品：</strong>GitLab Runner、GitHub Actions
@@ -58,9 +57,9 @@
     </div>
   </div>
 
-  <div style="margin-bottom: 35px;">
+  <div style="margin-bottom: 40px;">
     <h4 class="mb-4 text-1l font-bold md:mb-6 lg:text-3xl">Terraform導入</h4>
-    <div class="flex px-4 py-3 rounded-md" style="background-color: #E8CFFF">
+    <div class="flex px-4 py-3 rounded-md" style="background-color: #f3f5f7">
       <div>
         <div>
           <strong>製品：</strong>Terraform Cloud
@@ -82,7 +81,7 @@
 
   <div>
     <h4 class="mb-4 text-1l font-bold md:mb-6 lg:text-3xl">Ansibe導入</h4>
-    <div class="flex px-4 py-3 rounded-md" style="background-color: #FFB3B3">
+    <div class="flex px-4 py-3 rounded-md" style="background-color: #f3f5f7">
       <div>
         <div>
           <strong>製品：</strong>Red Hat Ansible Automation Platform
@@ -102,4 +101,22 @@
   </div>
 </div>
 
+<div class="f-container" style="padding:40px;margin-top:75px;display:flex; align-items: center; background-color: #fef3f3;border-radius: 20px;">
+  <div class="f-item" style="margin-right: 20px;">
+    <img src="/contact-1.png" style="width: 160px;">
+  </div>
+  <div class="f-item" style="font-size: 1.25rem;width: 580px;">
+    <h4 class="mb-4 text-1l font-bold md:mb-6 lg:text-2xl" style="margin-bottom: 20px;">自動化ソリューションについてのお問い合わせはこちら</h4>
+    <p>何かご質問やご要望がありましたらお知らせください。</p>
+    <p>私たちのチームがお手伝いできることを楽しみにしております。</p>
+  </div>
+  <div class="f-item" style="margin-left: 20px;">
+    <a style="
+    color:white;
+    background-color: red;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    padding: 1.5rem;" class="w-full rounded border" href="/contact">案件問合せ</a>
+  </div>
+</div>
 {{ end }}
